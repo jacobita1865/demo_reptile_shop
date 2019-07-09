@@ -1,0 +1,566 @@
+/* all-------------------------------------------------------------- */
+body{
+    font-family: 'Work Sans', 'Kosugi Maru', sans-serif;
+    height: 100%;
+    width: 100vw;
+    max-width: 1450px;
+    min-width: 320px;
+    margin: 0 auto;
+    color: #086464;
+}
+ul{
+    padding-left: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#bg{
+    background-image: url(../img/rainforest-white.jpg);
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.wrapper2{
+    min-height: 100%;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+}
+footer{
+    width: 100vw;
+    max-width: 1000px;
+    text-align: center;
+}
+/* footer最下部 */
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer {
+  margin-top: auto;
+}
+
+/* ハンバーガーメニュー----------------------------------------------------------- */
+.navToggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 37px;
+    z-index: 3;
+    background: #086464;
+    text-align: center;
+    border-radius: 10%;
+}
+.navToggle span {
+    display: block;
+    position: absolute;    /* .navToggleに対して */
+    width: 30px;
+    border-bottom: solid 3px white;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    left: 6px;
+}
+.navToggle span:nth-child(1) {
+    top: 9px;
+}
+.navToggle span:nth-child(2) {
+    top: 18px;
+}
+.navToggle span:nth-child(3) {
+    top: 27px;
+}
+.navToggle.active span:nth-child(1) {
+    top: 18px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.navToggle.active span:nth-child(2),
+.navToggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+nav.globalMenuSp {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transform: translateX(110%);
+    transition: all 0.6s;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+}
+nav.globalMenuSp ul{
+    padding: 0;
+    margin: 8vh 0 2vh 0;
+}
+nav.globalMenuSp #logos{
+    padding-bottom: 0;
+    z-index: 1;
+    height: 0;
+}
+nav.globalMenuSp img{
+    width: 32vw;
+    height: auto;
+}
+nav.globalMenuSp #_1{
+    position: relative;
+    bottom: 54vh;
+    left: -13vw;
+}
+nav.globalMenuSp #_2{
+    position: relative;
+    bottom: 90vh;
+    right: 5vw;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    transform: translate(65%, 50vh);
+}
+nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding-top: 15vw;
+    width: 100%;
+    max-width: 100vw;
+}
+nav.globalMenuSp ul li {
+    font-size: 1.1em;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+nav.globalMenuSp ul li a {
+    display: block;
+    padding: 0 0 1rem 0;
+}
+nav.globalMenuSp a{
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+}
+nav.globalMenuSp.active {
+    transform: translateX(0%);
+}
+/* ------------------------------------------------------------------------------ */
+/* portrait phones, less than 576px */
+.landscape, .tabletOver, .menu{
+    display: none;
+}
+.phone_header{
+    position: relative;
+    background-color: #086464;
+    width: 100vw;
+    height: 15vh;
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.25);
+}
+#shop{
+    position: absolute;
+    top: calc(50% - 5vh);
+    left: calc(50% - 45vw);
+    width: 33vw;
+}
+#rep{
+    position: absolute;
+    top: calc(50% - 1vh);
+    left: calc(50% - 24vw);
+    width: 50vw;
+}
+main{
+    padding-bottom: 100px;
+
+}
+.title{
+    height: 4rem;
+}
+.title h1{
+    text-align: center;
+    line-height: 4.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+section{
+    width: 90vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.date{
+    text-align: left;
+    font-size: 0.8rem;
+    color: black;
+    line-height: 1.5rem;
+}
+.back{
+    display: flex;
+    /* background: rgba(255, 255, 255, 0.5); */
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-top: 1rem;
+}
+/* 1枚追加 */
+.back::after{
+  content:"";
+  display: block;
+  width: 45vw;
+}
+/* ------- */
+.pic{
+    width: 45vw;
+    height: fit-content;
+    text-align: center;
+    padding-bottom: 0.5rem;
+
+}
+.pic img{
+    width: 40vw;
+    height: 30vw;
+    object-fit: cover;
+}
+.pic p{
+    display: inline-block;
+    text-align: left;
+    width: 40vw;
+    height: initial;
+    color: rgba(63, 63, 63, 1);
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1rem;
+}
+section span{
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+footer{
+    margin-top: 2rem;
+}
+footer ul{
+    margin-bottom: 1.5rem;
+}
+footer ul li{
+    margin-bottom: 1rem;
+}
+footer ul li a{
+    color: #086464;
+    font-size: medium;
+    font-size: 1rem;
+}
+
+small{
+    font-family: sans-serif;
+    font-size: xx-small;
+    display: inline-block;
+    width: 100vw;
+}
+
+
+
+/* landscape phones, 568px and up ---------------------------------------*/
+@media (min-width: 568px) {
+.landscape{
+    display: block;
+}
+.portrait, .tabletOver{
+    display: none;
+}
+
+nav.globalMenuSp ul{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    flex-wrap: wrap;
+    margin: 10vh auto 0.5rem auto;
+    padding-top: 0;
+}
+nav.globalMenuSp ul li{
+    width: 40vw;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+nav.globalMenuSp ul li a{
+    font-size: 5vh;
+}
+nav.globalMenuSp img{
+    width: 42%;
+}
+nav.globalMenuSp #_1{
+    bottom: 57vh;
+    -ms-transform: translate(-222%,-50%);
+    -webkit-transform: translate(-222%,-50%);
+    transform: translate(-222%,-50%);
+}
+nav.globalMenuSp #_2{
+    bottom: 50vh;
+    -ms-transform: translate(98%,-4%);
+    -webkit-transform: translate(98%,-4%);
+    transform: translate(98%,-4%);
+}
+.phone_header{
+    height: 5rem;
+}
+#shop{
+    width: 10rem;
+    top: calc(50% - 0.8rem);
+    left: calc(50% - 38vw);
+}
+#rep{
+    width: 13rem;
+    top: calc(50% - 1rem);
+    left: calc(50% - 6vw);
+}
+.pic p{
+    font-size: 0.8rem;
+}
+}
+
+/* ipad mini, 768px and up --------------------------------------*/
+@media (min-width: 768px) {
+.portrait, .landscape, .navigater, .phone_header{
+    display: none;
+}
+.tabletOver, .menu{
+    display: block;
+}
+.wrapper2{
+    background: url(img/rainforest_pc.jpg ) center center / cover no-repeat fixed;
+    width: 100vw;
+    max-width: 1100px;
+}
+header{
+    margin-bottom: 0;
+    padding-top: 2rem;
+    width: 100vw;
+    max-width: 1450px;
+    height: 9vh;
+    max-height: 100px;
+    position: relative;
+
+}
+.menu{
+    width:fit-content;
+    height: 10vh;
+    margin: 0 4vw;
+}
+.menu ul{
+    width: 85vw;
+    max-width: 600px;
+}
+.btn, .menu a{
+    width: calc(69vw / 6);
+    max-width: 129px;
+    height: 2rem;
+    min-width: 80px;
+    text-align: center;
+}
+.btn{
+    background-color: #086464;
+    border-radius: 12px;
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+    margin-bottom: 5px;
+    margin-right: 5px;
+    float: left;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+}
+.btn:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #086464;
+    transition: all .2s;
+}
+.menu a{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.menu ul li a p{
+    width: calc(57vw / 6);
+    max-width: 129px;
+    margin: 0;
+    align-items: center;
+    display: inline-block;
+
+}
+.little_letter{
+    font-size: 0.7rem;
+}
+/* .tabletOver{
+    position: relative;
+} */
+.top_sns{
+    position: absolute;
+    width: fit-content;
+    margin-left: 1rem;
+    padding-right: 0.5rem;
+    bottom: 2rem;
+    right: 2rem;
+    margin-top: 2rem;
+}
+.top_sns a, .top_sns a img{
+    margin-top: 1rem;
+    padding-right: 5px;
+    height: 2rem;
+}
+
+main{
+    text-align: center;
+    clear: both;
+}
+.title{
+    padding-top: 1.5rem;
+    height: inherit;
+}
+.title h1{
+    line-height: inherit;
+}
+/* １枚追加 */
+.back::after{
+  content:"";
+  display: block;
+  width: 290px;
+}
+/* ２枚目追加 */
+.back::before{
+  content:"";
+  display: block;
+  width: 290px;
+  order: 1;
+}
+/* ------------ */
+.pic{
+    width: 290px;
+}
+.pic img{
+    width: 290px;
+    height: 200px;
+}
+.pic p{
+    width: 290px;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+
+}
+section span{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+footer ul{
+    margin-bottom: 1.8rem;
+}
+.bottom{
+    margin-bottom: 0.5rem;
+}
+.bottom img{
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0 ,0.5));
+}
+#bottom_shop{
+    width: 5rem;
+}
+#bottom_rep{
+    width: 5rem;
+}
+
+
+}
+/* ---------------------------------992pxUP */
+@media (min-width: 992px){
+.tabletOver{
+    display: block;
+}
+header{
+    padding-bottom: 2rem;
+    height: 4rem;
+}
+.menu ul{
+    max-width: 850px;
+}
+.top_sns{
+    padding-right: 2rem;
+    margin-top: 2.5rem;
+}
+footer{
+    margin-left: auto;
+    margin-right: auto;
+}
+footer li{
+    float: left;
+    margin-right: 1rem;
+}
+.bottom{
+    float: right;
+}
+#bottom_shop{
+    display: inline-block;
+    width: 9.5rem;
+    margin-right: 7px;
+}
+#bottom_rep{
+    width: 10rem;
+}
+
+small{
+    max-width: inherit;
+}
+
+}
+
+/* large desktops, 1200px and up */
+@media (min-width: 1200px) {
+body{
+    background: url(../img/rainforest-white.jpg ) center center / cover no-repeat fixed;
+}
+.pc{
+    display: block;
+}
+.top_sns{
+    right: 18rem;
+}
+}
+
+@media all and (aspect-ratio: 16/9) {
+
+}
+
+/* @media screen and (min-width: 1400px) {
+
+
+} */
+
+/* Retina, height 1500px and up */
+/* @media screen and (min-height: 1500px) {
+
+} */
+
+/* iPad pro, height 1000 and up */
+/* @media screen and (min-height: 1000px){
+} */

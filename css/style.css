@@ -1,0 +1,569 @@
+/* all-------------------------------------------------------------- */
+body{
+    font-family: 'Work Sans', 'Kosugi Maru', sans-serif;
+    min-height: 100vh;
+    min-width: 320px;
+    height: 100%;
+    width: 100vw;
+    margin: 0 auto;
+    color: #086464;
+}
+ul{
+    padding-left: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#bg{
+    background-image: url(../img/rainforest-white.jpg);
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.wrapper2{
+    max-width: 1000px;
+    min-height: 100%;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+}
+footer{
+    width: 100vw;
+    max-width: 1000px;
+    text-align: center;
+}
+body,
+.wrapper2 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer {
+  margin-top: auto;
+}
+/* ハンバーガーメニュー----------------------------------------------------------- */
+.navToggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 37px;
+    z-index: 90;
+    background: #086464;
+    text-align: center;
+    border-radius: 10%;
+}
+.navToggle span {
+    display: block;
+    position: absolute;    /* .navToggleに対して */
+    width: 30px;
+    border-bottom: solid 3px white;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    left: 6px;
+}
+.navToggle span:nth-child(1) {
+    top: 9px;
+}
+.navToggle span:nth-child(2) {
+    top: 18px;
+}
+.navToggle span:nth-child(3) {
+    top: 27px;
+}
+.navToggle.active span:nth-child(1) {
+    top: 18px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.navToggle.active span:nth-child(2),
+.navToggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+nav.globalMenuSp {
+    position: fixed;
+    z-index: 89;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transform: translateX(110%);
+    transition: all 0.6s;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+}
+nav.globalMenuSp ul{
+    padding: 0;
+    margin: 8vh 0 2vh 0;
+}
+nav.globalMenuSp #logos{
+    padding-bottom: 0;
+    z-index: 1;
+    height: 0;
+}
+nav.globalMenuSp img{
+    width: 32vw;
+    height: auto;
+}
+nav.globalMenuSp #_1{
+    position: relative;
+    bottom: 54vh;
+    left: -13vw;
+}
+nav.globalMenuSp #_2{
+    position: relative;
+    bottom: 90vh;
+    right: 5vw;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    transform: translate(65%, 50vh);
+}
+nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding-top: 15vw;
+    width: 100%;
+    max-width: 100vw;
+}
+nav.globalMenuSp ul li {
+    font-size: 1.1em;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+nav.globalMenuSp ul li a {
+    display: block;
+    padding: 0 0 2.5vh 0;
+}
+nav.globalMenuSp a{
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+}
+nav.globalMenuSp.active {
+    transform: translateX(0%);
+}
+/* ------------------------------------------------------------------------------ */
+/* portrait phones, less than 576px */
+.portrait{
+    display: block;
+}
+.landscape, .tabletOver, .menu, .pc{
+    display: none;
+}
+
+.shop_name{
+    text-align: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+#shop_cate{
+    margin: 0 auto 0.5rem auto;
+    width: 10rem;
+    height: auto;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0 ,0.5));
+    display: block;
+}
+#logo_name{
+    margin-bottom: 0.5rem;
+    width: 15rem;
+    height: auto;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0 ,0.5));
+}
+.images{
+    width: 100vw;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.img_wrap{
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+.images img{
+    width: 45vw;
+    height: 35vw;
+    object-fit: cover;
+}
+.portrait{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.text{
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+}
+.bold{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.address{
+    margin-bottom: 1rem;
+}
+.text p{
+    margin-bottom: 7px;
+}
+.t{
+    font-size: 0.8rem;
+}
+.bottoms{
+    text-align: center;
+}
+#bottom_logo{
+    width: 12rem;
+    margin-bottom: 1rem;
+}
+.bottom_sns{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.bottom_sns a, .bottom_sns img{
+    height: 2rem;
+    /* height: auto; */
+}
+footer ul{
+    margin-bottom: 1.5rem;
+}
+footer ul li{
+    margin-bottom: 1.5rem;
+}
+footer ul li a{
+    color: #086464;
+    font-size: medium;
+}
+
+small{
+    font-family: sans-serif;
+    font-size: xx-small;
+    display: inline-block;
+    width: 100vw;
+    max-width: 1000px;
+}
+
+
+/* landscape phones, 568px and up ---------------------------------------*/
+@media (min-width: 568px) {
+.landscape{
+    display: block;
+}
+.portrait, .tabletOver, .pc{
+    display: none;
+}
+nav.globalMenuSp ul{
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    flex-wrap: wrap;
+    margin: 10vh auto 0.5rem auto;
+    padding-top: 0;
+}
+nav.globalMenuSp ul li{
+    width: 40vw;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+nav.globalMenuSp ul li a{
+    font-size: 5vh;
+}
+nav.globalMenuSp img{
+    width: 42%;
+}
+nav.globalMenuSp #_1{
+    bottom: 57vh;
+    -ms-transform: translate(-222%,-50%);
+    -webkit-transform: translate(-222%,-50%);
+    transform: translate(-222%,-50%);
+}
+nav.globalMenuSp #_2{
+    bottom: 50vh;
+    -ms-transform: translate(98%,-4%);
+    -webkit-transform: translate(98%,-4%);
+    transform: translate(98%,-4%);
+}
+
+.shop_name{
+    position: relative;
+    height: auto;
+    margin: 0;
+}
+#shop_cate{
+    position: absolute;
+    top: calc(50% + 9rem);
+    left: calc(50% - 16rem);
+    width: 15rem;
+    margin: 0;
+
+}
+#logo_name{
+    position: absolute;
+    top: calc(50% + 9rem);
+    right: calc(50% - 16rem);
+    width: 17rem;
+    margin: 0;
+}
+header{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.images{
+    margin: 0.5rem auto 5rem auto;
+    width: 80vw;
+    height: auto;
+}
+.images img{
+    padding-bottom: 0;
+    width: calc(76vw / 3);
+    height: 7rem;
+}
+#img1, #img2, #img3{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+#img4, #img5, #img6{
+    margin-top: 3rem;
+}
+
+}
+
+/* ipad mini, 768px and up --------------------------------------*/
+@media (min-width: 768px) {
+.portrait, .landscape, .navigater, .bottoms{
+    display: none;
+}
+.tabletOver, .menu{
+    display: block;
+}
+
+.wrapper2{
+    width: 95vw;
+    /* width: 100vw; */
+    /* max-width: 1100px; */
+}
+header{
+    margin-bottom: 0;
+}
+/* .menu{
+    width: 75vw;
+    max-width: 500px;
+} */
+.menu ul{
+    width: 85vw;
+    max-width: 600px;
+}
+.btn, .menu a{
+    width: calc(69vw / 6);
+    max-width: 129px;
+    height: 2rem;
+    min-width: 80px;
+    text-align: center;
+}
+.btn{
+    background-color: #086464;
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    float: left;
+     cursor: pointer;
+     transition: all .2s;
+     position: relative;
+}
+.btn:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #086464;
+    transition: all .2s;
+}
+.menu a{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.menu ul li a p{
+    width: calc(57vw / 6);
+    max-width: 129px;
+    margin: 0;
+    align-items: center;
+
+}
+.little_letter{
+    font-size: 0.7rem;
+}
+.top_sns{
+    position: absolute;
+    width: fit-content;
+    padding-right: 0.5rem;
+    top: 0;
+    right: 2rem;
+    margin-top: 5px;
+}
+.top_sns a, .top_sns a img{
+    margin-top: 1rem;
+    padding-left: 3px;
+    height: 2rem;
+}
+.shop_name{
+    width: 100%;
+}
+#shop_cate{
+    top: calc(50% + 18rem);
+    left: calc(50% - 17rem);
+}
+#logo_name{
+    top: calc(50% + 18rem);
+    right: calc(50% - 17rem);
+}
+.images{
+    width: 95vw;
+    max-width: 950px;
+    margin-top: 2rem;
+}
+.img_wrap{
+    max-width: 950px;
+}
+.images img{
+    width: calc(93vw / 3);
+    height: 10rem;
+}
+main{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline{
+    margin: 0;
+    width: fit-content;
+}
+.text{
+    position: absolute;
+    left: calc(50% + 5.5rem);
+    bottom: 0;
+    margin: 0;
+    width: fit-content;
+    padding-bottom: 2rem;
+}
+.address, .other{
+    text-align: left;
+}
+#blackLogo{
+    width: 32vw;
+}
+
+}
+/* ----------------992px up-------------- */
+@media (min-width: 992px){
+.tabletOver{
+    display: block;
+}
+.menu ul{
+    max-width: 850px;
+}
+.sns{
+    position: relative;
+}
+/* .top_sns{
+    position: absolute;
+    width: fit-content;
+    margin-left: 2rem;
+    padding-right: 0.5rem;
+    top: 0;
+    right: 2rem;
+} */
+.shop_name p{
+    top: 17rem;
+    left: calc(50% - 24rem);
+    font-size: 3rem;
+}
+#logo_name{
+    top: 17rem;
+    right: calc(50% - 23rem);
+    width: 23rem;
+}
+.images img{
+    width: calc(91vw / 3);
+}
+#blackLogo{
+    width: 17rem;
+}
+.text{
+    margin-bottom: 1rem;
+    left: calc(50% + 9rem);
+}
+footer ul{
+    width: 95vw;
+    max-width: 1000px;
+}
+footer li{
+    float: right;
+    margin-right: 1rem;
+
+}
+}
+
+/* large desktops, 1200px and up */
+@media (min-width: 1200px) {
+.tabletOver{
+    display: none;
+}
+.pc{
+    display: block;
+}
+
+.images img{
+    width: calc(68vw / 3);
+}
+#blackLogo{
+    width: 20rem;
+}
+.address, .other{
+    font-size: 1.5rem;
+}
+}
+@media screen and (min-width: 1400px) {
+.images img{
+    width: calc(62.6vw / 3);
+}
+}
+
+/* Retina, height 1500px and up */
+@media screen and (min-height: 1500px) {
+.images img{
+    width: 240px;
+    height: 160px;
+}
+
+}
+
+/* iPad pro, height 1000 and up */
+/* @media screen and (min-height: 1000px){
+} */

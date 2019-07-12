@@ -1,6 +1,6 @@
 /* all-------------------------------------------------------------- */
 body{
-    font-family: 'Work Sans', 'Kosugi Maru', sans-serif;
+    font-family: sans-serif;
     min-height: 100vh;
     min-width: 320px;
     height: 100%;
@@ -177,7 +177,10 @@ nav.globalMenuSp.active {
 .landscape, .tabletOver, .menu, .pc{
     display: none;
 }
-
+.tw1{
+    width: 95vw;
+    height: 35rem;
+}
 .shop_name{
     text-align: center;
     margin-top: 2rem;
@@ -354,6 +357,10 @@ header{
 #img4, #img5, #img6{
     margin-top: 3rem;
 }
+.tw2{
+    width: 95vw;
+    height: 320px;
+}
 
 }
 
@@ -460,6 +467,10 @@ main{
     position: relative;
     margin-bottom: 2rem;
 }
+.tw3{
+    width: 50vw;
+    height: 27rem;
+}
 .timeline{
     margin: 0;
     width: fit-content;
@@ -541,6 +552,10 @@ footer li{
 
 .images img{
     width: calc(68vw / 3);
+}
+.tw4{
+    width: 540px;
+    height: 50rem;
 }
 #blackLogo{
     width: 20rem;
